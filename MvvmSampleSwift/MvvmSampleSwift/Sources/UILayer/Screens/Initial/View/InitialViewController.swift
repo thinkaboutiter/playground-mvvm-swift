@@ -13,6 +13,7 @@ class InitialViewController: BaseViewController, InitialViewModelConsumer {
     
     // MARK: - Properties
     private let viewModel: InitialViewModel
+    private let fooVCFactory: () -> FooViewController
     
     // MARK: - Initialization
     @available(*, unavailable, message: "Creating this view controller with `init(coder:)` is unsupported in favor of initializer dependency injection.")
@@ -25,17 +26,21 @@ class InitialViewController: BaseViewController, InitialViewModelConsumer {
         fatalError("Creating this view controller with `init(nibName:bundle:)` is unsupported in favor of dependency injection initializer.")
     }
     
+    init(viewModel: InitialViewModel,
+         fooVCFactory: @escaping () -> FooViewController)
+    {
+        self.viewModel = viewModel
+        self.fooVCFactory = fooVCFactory
+        super.init(nibName: String(describing: InitialViewController.self), bundle: nil)
+        self.viewModel.setViewModelConsumer(self)
+        Logger.success.message()
+    }
+    
     deinit {
         Logger.fatal.message()
     }
     
     // MARK: - InitialViewModelConsumer protocol
-    required init(viewModel: InitialViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: String(describing: InitialViewController.self), bundle: nil)
-        self.viewModel.setViewModelConsumer(self)
-        Logger.success.message()
-    }
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -46,6 +51,7 @@ class InitialViewController: BaseViewController, InitialViewModelConsumer {
     
     // MARK: - Actions
     @IBAction func showFooScreenButton_touchUpInside(_ sender: Any) {
-        Logger.debug.message()
+        let vc: FooViewController = self.fooVCFactory()
+        self.present(vc, animated: true, completion: nil)
     }
 }

@@ -22,14 +22,27 @@ class InitialDependecyContainer {
     }
     
     // MARK: - Factory methods
+    // MARK: - Initial screen
     func makeInitialViewController() -> InitialViewController {
         let vm: InitialViewModel = self.makeInitialViewModel()
-        let vc: InitialViewController = InitialViewController(viewModel: vm)
+        let fooVCFactory: () -> FooViewController = {
+            return self.makeFooViewController()
+        }
+        let vc: InitialViewController =
+            InitialViewController(viewModel: vm,
+                                  fooVCFactory: fooVCFactory)
         return vc
     }
     
     private func makeInitialViewModel() -> InitialViewModel {
         let result: InitialViewModel = InitialViewModelImpl()
         return result
+    }
+    
+    // MARK: - Foo screen
+    private func makeFooViewController() -> FooViewController {
+        let container: FooDependecyContainer = FooDependecyContainer(initialDependencyContainer: self)
+        let vc: FooViewController = container.makeFooViewConroller()
+        return vc
     }
 }

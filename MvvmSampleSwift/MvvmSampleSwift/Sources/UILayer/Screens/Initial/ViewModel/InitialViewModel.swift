@@ -11,7 +11,6 @@ import SimpleLogger
 
 /// Functionality for `View` object to implement
 protocol InitialViewModelConsumer: AnyObject {
-    init(viewModel: InitialViewModel)
 }
 
 /// Functionality for `ViewModel` object to implement and expose to `View` object

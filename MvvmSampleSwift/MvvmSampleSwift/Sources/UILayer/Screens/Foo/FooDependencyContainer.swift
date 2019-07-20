@@ -12,10 +12,9 @@ import SimpleLogger
 class FooDependecyContainer {
     
     // MARK: - Initialization
-    init() {
+    init(initialDependencyContainer: InitialDependecyContainer) {
         // setup
-        // NOTE: If needed refactor initializer
-        // to have parent container injected as parameter
+        // NOTE: If needed obtain and shared data from parent container
         Logger.success.message()
     }
     
