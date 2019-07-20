@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="MvvmSampleSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="TF1-w0-80b" id="b32-0P-W7D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="TF1-w0-80b">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Initial Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-ru-Ajw" userLabel="title-label">
+                    <rect key="frame" x="136" y="437.5" width="142" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tc-gJ-xHT" userLabel="show-foo-screen-button">
+                    <rect key="frame" x="147" y="832" width="120" height="30"/>
+                    <state key="normal" title="Show Foo Screen"/>
+                    <connections>
+                        <action selector="showFooScreenButton_touchUpInside:" destination="-1" eventType="touchUpInside" id="yfY-hW-FkT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KQh-va-ssx" firstAttribute="bottom" secondItem="1tc-gJ-xHT" secondAttribute="bottom" id="5La-2v-8da"/>
+                <constraint firstItem="ehV-ru-Ajw" firstAttribute="centerX" secondItem="TF1-w0-80b" secondAttribute="centerX" id="MpO-In-eBf"/>
+                <constraint firstItem="ehV-ru-Ajw" firstAttribute="centerY" secondItem="TF1-w0-80b" secondAttribute="centerY" id="aH4-xC-NHQ"/>
+                <constraint firstItem="1tc-gJ-xHT" firstAttribute="centerX" secondItem="TF1-w0-80b" secondAttribute="centerX" id="ifk-ST-rr5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="KQh-va-ssx"/>
+            <point key="canvasLocation" x="93" y="-307"/>
+        </view>
+    </objects>
+</document>
