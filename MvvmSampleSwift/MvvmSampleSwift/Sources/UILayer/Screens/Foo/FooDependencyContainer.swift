@@ -9,7 +9,7 @@
 import Foundation
 import SimpleLogger
 
-class FooDependecyContainer {
+class FooDependencyContainer {
     
     // MARK: - Initialization
     init(initialDependencyContainer: InitialDependecyContainer) {

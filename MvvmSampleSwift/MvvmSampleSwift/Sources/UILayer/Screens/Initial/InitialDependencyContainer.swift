@@ -41,7 +41,7 @@ class InitialDependecyContainer {
     
     // MARK: - Foo screen
     private func makeFooViewController() -> FooViewController {
-        let container: FooDependecyContainer = FooDependecyContainer(initialDependencyContainer: self)
+        let container: FooDependencyContainer = FooDependencyContainer(initialDependencyContainer: self)
         let vc: FooViewController = container.makeFooViewConroller()
         return vc
     }
