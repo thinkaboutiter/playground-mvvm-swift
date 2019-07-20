@@ -1,0 +1,21 @@
+PODS:
+  - SimpleLogger (2.4.1)
+
+DEPENDENCIES:
+  - SimpleLogger (from `https://github.com/thinkaboutiter/SimpleLogger.git`)
+
+EXTERNAL SOURCES:
+  SimpleLogger:
+    :git: https://github.com/thinkaboutiter/SimpleLogger.git
+
+CHECKOUT OPTIONS:
+  SimpleLogger:
+    :commit: 98e0f489f498111d71b49c47e86e2701fec5296d
+    :git: https://github.com/thinkaboutiter/SimpleLogger.git
+
+SPEC CHECKSUMS:
+  SimpleLogger: 458e0f25c5af1eb229bf0e911b714b7655494cd8
+
+PODFILE CHECKSUM: 7c801d22583296f44adbb357be080058bf5e6212
+
+COCOAPODS: 1.7.5

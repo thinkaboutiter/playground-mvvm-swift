@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.4'
+
+def obtain_pods
+
+  # Pods
+  pod "SimpleLogger", :git => "https://github.com/thinkaboutiter/SimpleLogger.git"
+end
+
+target 'MvvmSampleSwift' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MvvmSampleSwift
+  obtain_pods
+end
