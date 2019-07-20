@@ -11,11 +11,16 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - Properies
     var window: UIWindow?
-
-
+    private let initialDependecyContainer: InitialDependecyContainer = InitialDependecyContainer()
+    
+    // MARK: - Life cylce methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let vc: InitialViewController = self.initialDependecyContainer.makeInitialViewController()
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
         return true
     }
 
