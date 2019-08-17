@@ -12,7 +12,7 @@ import SimpleLogger
 class FooDependencyContainer {
     
     // MARK: - Initialization
-    init(initialDependencyContainer: InitialDependecyContainer) {
+    init(initialDependencyContainer: InitialDependencyContainer) {
         // setup
         // NOTE: If needed obtain and shared data from parent container
         Logger.success.message()
