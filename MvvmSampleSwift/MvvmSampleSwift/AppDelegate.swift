@@ -13,11 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Properies
     var window: UIWindow?
-    private let initialDependecyContainer: InitialDependecyContainer = InitialDependecyContainer()
+    private let initialDependencyContainer: InitialDependencyContainer = InitialDependencyContainer()
     
     // MARK: - Life cylce methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let vc: InitialViewController = self.initialDependecyContainer.makeInitialViewController()
+        let vc: InitialViewController = self.initialDependencyContainer.makeInitialViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
